@@ -1,0 +1,215 @@
+.image-slideshow{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+    @include sm{
+        height: 500px;
+    }
+        
+    img {
+        vertical-align: middle;
+    }
+    
+    /* Position the image container (needed to position the left and right arrows) */
+    .container {
+        position: relative;
+    }
+    
+    /* Hide the images by default */
+    .mySlides {
+        display: none;
+    }
+    
+    /* Add a pointer when hovering over the thumbnail images */
+    .cursor {
+        cursor: pointer;
+    }
+    
+    /* Next & previous buttons */
+    .prev,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        width: auto;
+        padding: 10px 20px;
+        margin-top: -50px;
+        color: $gray!important;
+        background: $white;
+        font-weight: bold;
+        font-size: 20px;
+        border: 1px solid $gray-30;
+        user-select: none;
+        -webkit-user-select: none;
+        z-index: 3;
+        @include transition;
+
+        @include xl{
+            padding: 0px 10px;
+            margin-top: -90px;
+            font-size: 12px;
+        }
+
+        @include lg{
+            padding: 0px 10px;
+            margin-top: -110px;
+            font-size: 12px;
+        }
+
+        @include md{
+            padding: 0px 10px;
+            margin-top: -125px;
+            font-size: 12px;
+        }
+        @include sm{
+            padding: 0px 10px;
+            margin-top: -130px;
+            font-size: 10px;
+        }
+        @include rmaxwd(576){ 
+            padding: 0px 10px;
+            margin-top: -140px;
+            font-size: 8px;
+        }
+        @include rmaxwd(370){ 
+            padding: 0px 10px;
+            margin-top: -160px;
+            font-size: 8px;
+        }
+    }
+    
+    /* Position the "next button" to the right */
+    .next{
+        right: 5%;
+        border-radius: 50%;
+    }
+
+    .prev {
+        left: 5%;
+        border-radius: 50%;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+        color: $white!important;
+        background: $primary-color;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+        color: $white;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+    }
+    
+    /* Container for image text */
+    .caption-container {
+        text-align: center;
+        background-color: $primary-color;
+        padding: 2px 16px;
+        color: $white;
+
+        @include sm{
+            font-size: 10px;
+            padding: 0px;
+        }
+    }
+    
+    .overview{
+        position: absolute;
+        top: 63%;
+        left: 55%; 
+        transform: translate(-63%,-55%);
+        padding: 10px 10px;
+        background: $gray-100;
+        z-index: 99;
+
+        @include rmaxwd(1400){ 
+            top: 50%;
+            left: 52%; 
+            transform: translate(-50%,-52%);
+        }
+
+        @include lg{
+            top: 40%;
+            left: 45%;
+            transform: translate(-40%,-45%);
+        }
+
+        @include md{
+            top: 32%;
+            left: 38%;
+            transform: translate(-32%,-38%);
+            padding: 5px 5px;
+        }
+
+        @include sm{
+            top: 24%;
+            left: 33%;
+            transform: translate(-24%,-33%);
+            padding: 5px 5px;
+        }
+
+        @include rmaxwd(576){
+            top: 24%;
+            left: 31%;
+            transform: translate(-24%,-31%);
+            padding: 1px 4px;
+        }
+
+        @include rmaxwd(425){
+            top: 20%;
+            left: 28%;
+            transform: translate(-20%,-28%);
+            padding: 1px 4px;
+        }
+
+        @include rmaxwd(376){
+            top: 17%;
+            left: 26%;
+            transform: translate(-17%,-26%);
+            padding: 1px 4px;
+        }
+
+        @include rmaxwd(350){
+            display: none;
+        }
+
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+        
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
+            height: 42px;
+
+            @include md{
+                height: 25px;
+            }
+
+            @include sm{
+                height: 15px;
+            }
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+            border: 1px solid $primary-color;
+        } 
+    }
+}

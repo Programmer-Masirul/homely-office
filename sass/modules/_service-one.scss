@@ -1,0 +1,104 @@
+// SERVICE AREA
+/* Genaral */
+
+
+.button {
+  padding: 10px 20px;
+  background: $primary-color;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+}
+
+/* End Genaral */
+
+// SERVICE AREA
+.service-card {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0% 30%) !important;
+  background-color: #E3DBD8;
+  width: 19rem;
+  gap: 20px !important
+}
+
+.card-content {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 100% 100%, 0 100%, 0% 70%, 0% 30%) !important;
+  margin: .3px;
+  background-color: #fff;
+}
+
+.service .icon {
+  width: 40%;
+  height: auto;
+  padding: 5px 5px;
+  margin-top: 5%;
+}
+
+.service .card-content .card-text h3 {
+  font-family: 'Teko', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-bottom: 0;
+  color: black;
+}
+
+.service .card-content .card-text p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: center;
+  padding: 0px 35px;
+  overflow: hidden;
+  color: #666666;
+}
+
+.s-bottom-text {
+  margin-top: 70px;
+
+  @include sm {
+    margin-top: 20px;
+    font-size: 15px;
+    flex-direction: column;
+  }
+
+  .s-highlight {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $primary-color;
+  }
+
+
+}
+
+
+
+// HEADLINE
+.heading-line::before {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 0.1rem;
+  background-color: $primary-color;
+  margin: 0 auto;
+}
+
+
+.heading-line::after {
+  content: '';
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  top: 0.3rem;
+  transform: translateY(-0.3rem);
+  background-color: $primary-color;
+  border-radius: 50%;
+  margin: 0 auto;
+}
